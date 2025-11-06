@@ -6,27 +6,72 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink to="/about" className="hover:text-primary duration-200">
-          About us
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            `px-4 py-2 rounded-lg transition-all duration-200 ${
+              isActive
+                ? "bg-[#B9FF66] text-black font-semibold shadow-sm"
+                : "text-gray-700 hover:bg-[#B9FF66]/80 hover:text-black"
+            }`
+          }
+        >
+          About Us
         </NavLink>
       </li>
       <li>
-        <NavLink to="/services" className="hover:text-primary duration-200">
+        <NavLink
+          to="/services"
+          className={({ isActive }) =>
+            `px-4 py-2 rounded-lg transition-all duration-200 ${
+              isActive
+                ? "bg-[#B9FF66] text-black font-semibold shadow-sm"
+                : "text-gray-700 hover:bg-[#B9FF66]/80 hover:text-black"
+            }`
+          }
+        >
           Services
         </NavLink>
       </li>
       <li>
-        <NavLink to="/use-cases" className="hover:text-primary duration-200">
+        <NavLink
+          to="/use-case"
+          className={({ isActive }) =>
+            `px-4 py-2 rounded-lg transition-all duration-200 ${
+              isActive
+                ? "bg-[#B9FF66] text-black font-semibold shadow-sm"
+                : "text-gray-700 hover:bg-[#B9FF66]/80 hover:text-black"
+            }`
+          }
+        >
           Use Cases
         </NavLink>
       </li>
       <li>
-        <NavLink to="/pricing" className="hover:text-primary duration-200">
+        <NavLink
+          to="/pricing"
+          className={({ isActive }) =>
+            `px-4 py-2 rounded-lg transition-all duration-200 ${
+              isActive
+                ? "bg-[#B9FF66] text-black font-semibold shadow-sm"
+                : "text-gray-700 hover:bg-[#B9FF66]/80 hover:text-black"
+            }`
+          }
+        >
           Pricing
         </NavLink>
       </li>
       <li>
-        <NavLink to="/blog" className="hover:text-primary duration-200">
+        <NavLink
+          to="/blog"
+          className={({ isActive }) =>
+            `px-4 py-2 rounded-lg transition-all duration-200 ${
+              isActive
+                ? "bg-[#B9FF66] text-black font-semibold shadow-sm"
+                : "text-gray-700 hover:bg-[#B9FF66]/80 hover:text-black"
+            }`
+          }
+        >
           Blog
         </NavLink>
       </li>
@@ -36,14 +81,11 @@ const Navbar = () => {
   return (
     <nav className="bg-base-100  px-4 lg:px-12 py-3">
       <div className="flex justify-between items-center">
-        
         <div>
           <Logo />
         </div>
 
-       
         <div className="flex items-center">
-         
           <div className="dropdown lg:hidden">
             <button tabIndex={0} className="btn btn-ghost">
               <svg
@@ -74,7 +116,6 @@ const Navbar = () => {
             </ul>
           </div>
 
-          
           <ul className="hidden lg:flex items-center space-x-6">
             {navLinks}
             <button className="btn btn-outline ml-4 hover:bg-[#B9FF66] hover:text-black duration-200">
