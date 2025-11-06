@@ -1,79 +1,89 @@
 import React from "react";
+import Logo from "../AppLogo/Logo";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
+  const navLinks = (
+    <>
+      <li>
+        <NavLink to="/about" className="hover:text-primary duration-200">
+          About us
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/services" className="hover:text-primary duration-200">
+          Services
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/use-cases" className="hover:text-primary duration-200">
+          Use Cases
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/pricing" className="hover:text-primary duration-200">
+          Pricing
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/blog" className="hover:text-primary duration-200">
+          Blog
+        </NavLink>
+      </li>
+    </>
+  );
+
   return (
-    <div className="navbar bg-base-100 shadow-sm">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+    <nav className="bg-base-100  px-4 lg:px-12 py-3">
+      <div className="flex justify-between items-center">
+        
+        <div>
+          <Logo />
+        </div>
+
+       
+        <div className="flex items-center">
+         
+          <div className="dropdown lg:hidden">
+            <button tabIndex={0} className="btn btn-ghost">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow bg-base-100 rounded-box w-52 right-0"
             >
-              {" "}
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />{" "}
-            </svg>
+              {navLinks}
+              <li className="mt-2">
+                <button className="btn btn-outline btn-sm w-full">
+                  Request a Quote
+                </button>
+              </li>
+            </ul>
           </div>
-          <ul
-            tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-          >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+
+          
+          <ul className="hidden lg:flex items-center space-x-6">
+            {navLinks}
+            <button className="btn btn-outline ml-4 hover:bg-[#B9FF66] hover:text-black duration-200">
+              Request a Quote
+            </button>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
-        </ul>
-      </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
-      </div>
-    </div>
+    </nav>
   );
 };
 
