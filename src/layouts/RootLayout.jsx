@@ -5,7 +5,7 @@ import Footer from '../Pages/Shared/Footer/Footer';
 
 const RootLayout = () => {
     return (
-        <div>
+        <div className='font-space-grotesk'>
             <Navbar/>
             <Outlet></Outlet>
             <Footer/>
