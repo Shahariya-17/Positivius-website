@@ -79,7 +79,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-base-100  px-4 lg:px-12 py-3">
+    <nav className="bg-base-100   py-3">
       <div className="flex justify-between items-center">
         <div>
           <Logo />
