@@ -114,14 +114,14 @@ const Service = () => {
         ))}
       </div>
 
-      <div>
+      <div className="flex justify-between items-center mt-20 rounded-2xl px-12 bg-gray-200">
         <div>
-          <h3>Let’s make things happen</h3>
-          <p>
-            Contact us today to learn more about how our digital marketing
-            services can help your business grow and succeed online.
+          <h3 className="text-2xl font-bold">Let’s make things happen</h3>
+          <p className="text-sm mt-8">
+            Contact us today to learn more about how our digital <br /> marketing
+            services can help your business grow and <br /> succeed online.
           </p>
-          <button>Get your free proposal</button>
+          <button className="px-6 py-3 bg-black text-white rounded-xl mt-8">Get your free proposal</button>
         </div>
         <div>
           <img src={analytics2Img} alt="" />
