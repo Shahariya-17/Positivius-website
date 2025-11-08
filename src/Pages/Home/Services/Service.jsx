@@ -2,13 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
-
 import seoImg from "../../../assets/Illustrations/Illustration (1).png";
 import ppcImg from "../../../assets/Illustrations/Illustration (2).png";
 import socialImg from "../../../assets/Illustrations/Illustration (3).png";
-import emailImg from "../../../assets/Illustrations/Illustration (4).png";
-import contentImg from "../../../assets/Illustrations/Illustration (5).png";
-import analyticsImg from "../../../assets/Illustrations/Illustration (6).png";
+import emailImg from "../../../assets/Illustrations/tokyo-sending-messages-from-one-place-to-another 1.png";
+import contentImg from "../../../assets/Illustrations/Illustration (4).png";
+import analyticsImg from "../../../assets/Illustrations/Illustration (5).png";
+import analytics2Img from "../../../assets/Illustrations/Illustration (6).png";
 
 const services = [
   {
@@ -52,7 +52,6 @@ const services = [
 const Service = () => {
   return (
     <section className="px-6 md:px-12 py-20 bg-white font-sans overflow-hidden">
-     
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
         <h2 className="text-3xl md:text-4xl font-bold">
           <span className="bg-[#B9FF66] px-4 py-1 rounded-md shadow-sm">
@@ -65,7 +64,6 @@ const Service = () => {
         </p>
       </div>
 
-      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {services.map((service, index) => (
           <motion.div
@@ -81,7 +79,6 @@ const Service = () => {
             }}
             className={`${service.bg} ${service.text} flex flex-col md:flex-row justify-between items-center rounded-3xl px-10 py-10 border border-black shadow-[0_5px_0_#000] transition-all duration-300`}
           >
-            
             <div className="md:w-1/2 flex flex-col justify-between space-y-6">
               <h3 className="text-xl md:text-2xl font-semibold leading-snug">
                 <span
@@ -104,7 +101,6 @@ const Service = () => {
               </button>
             </div>
 
-           
             <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
               <motion.img
                 src={service.img}
@@ -116,6 +112,20 @@ const Service = () => {
             </div>
           </motion.div>
         ))}
+      </div>
+
+      <div>
+        <div>
+          <h3>Let’s make things happen</h3>
+          <p>
+            Contact us today to learn more about how our digital marketing
+            services can help your business grow and succeed online.
+          </p>
+          <button>Get your free proposal</button>
+        </div>
+        <div>
+          <img src={analytics2Img} alt="" />
+        </div>
       </div>
     </section>
   );
