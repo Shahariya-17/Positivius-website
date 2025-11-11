@@ -7,6 +7,21 @@ const Navbar = () => {
     <>
       <li>
         <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `px-4 py-2 rounded-lg transition-all duration-200 ${
+              isActive
+                ? "bg-[#B9FF66] text-black font-semibold shadow-sm"
+                : "text-gray-700 hover:bg-[#B9FF66]/80 hover:text-black"
+            }`
+          }
+        >
+          Home
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink
           to="/about"
           className={({ isActive }) =>
             `px-4 py-2 rounded-lg transition-all duration-200 ${
@@ -19,6 +34,7 @@ const Navbar = () => {
           About Us
         </NavLink>
       </li>
+
       <li>
         <NavLink
           to="/services"
@@ -33,6 +49,7 @@ const Navbar = () => {
           Services
         </NavLink>
       </li>
+
       <li>
         <NavLink
           to="/use-case"
@@ -47,6 +64,7 @@ const Navbar = () => {
           Use Cases
         </NavLink>
       </li>
+
       <li>
         <NavLink
           to="/pricing"
@@ -61,6 +79,7 @@ const Navbar = () => {
           Pricing
         </NavLink>
       </li>
+
       <li>
         <NavLink
           to="/blog"
@@ -79,13 +98,14 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-base-100   py-3">
+    <nav className="bg-base-100 py-3">
       <div className="flex justify-between items-center">
         <div>
           <Logo />
         </div>
 
         <div className="flex items-center">
+          {/* Mobile Menu */}
           <div className="dropdown lg:hidden">
             <button tabIndex={0} className="btn btn-ghost">
               <svg
@@ -109,13 +129,14 @@ const Navbar = () => {
             >
               {navLinks}
               <li className="mt-2">
-                <button className="btn btn-outline btn-sm w-full">
+                <button className="btn btn-outline btn-sm w-full hover:bg-[#B9FF66] hover:text-black">
                   Request a Quote
                 </button>
               </li>
             </ul>
           </div>
 
+          {/* Desktop Menu */}
           <ul className="hidden lg:flex items-center space-x-6">
             {navLinks}
             <button className="btn btn-outline ml-4 hover:bg-[#B9FF66] hover:text-black duration-200">
