@@ -3,6 +3,7 @@ import React from "react";
 const Team = () => {
   return (
     <div className="text-center">
+     
     </div>
   );
 };
